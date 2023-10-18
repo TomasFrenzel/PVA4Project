@@ -16,10 +16,10 @@
             <label for="password">Heslo:</label>
             <input type="password" id="password" name="password" required><br><br>
 
-            <input type="submit" value="Přihlásit se">
+            <input type="submit" name="submit" value="Přihlásit se">
 
             <div class="register-link">
-                Nemáte ještě účet? <a href="register.html">Registrovat se</a>
+                Nemáte ještě účet? <a href="register.php">Registrovat se</a>
             </div>
         </form>
     </div>

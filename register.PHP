@@ -1,3 +1,26 @@
+<?php
+    include "mysql/db.php";
+
+    if(isset($_POST["submit"])){
+        echo "data odeslány";
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $email = $_POST["email"];
+
+        $query = "INSERT INTO users(username,email,password) 
+        VALUES('$username','$email','$password')";
+
+        $result = mysqli_query($connection, $query);
+        echo"$username";
+
+        if(!$result){
+            die ("dotaz do databze selhal".mysqli_error());
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +32,7 @@
 <body>
     <div class="container">
         <h2>Registrace</h2>
-        <form action="proces.php" method="post">
+        <form action="register.php" method="post">
             <label for="username">Uživatelské jméno:</label>
             <input type="text" id="username" name="username" required><br><br>
 
@@ -19,10 +42,10 @@
             <label for="password">Heslo:</label>
             <input type="password" id="password" name="password" required><br><br>
 
-            <input type="submit" value="registrovat se">
+            <input type="submit" name="submit"value="registrovat se">
 
             <div class="register-link">
-                Už máte účet? <a href="index.html">Přihlásit se</a>
+                Už máte účet? <a href="index.php">Přihlásit se</a>
             </div>
         </form>
     </div>
