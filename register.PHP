@@ -12,7 +12,6 @@
         VALUES('$username','$email','$password')";
 
         $result = mysqli_query($connection, $query);
-        echo"$username";
 
         if(!$result){
             die ("dotaz do databze selhal".mysqli_error());

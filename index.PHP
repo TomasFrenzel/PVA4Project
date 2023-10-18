@@ -1,3 +1,9 @@
+<?php
+    include "mysql/db.php";
+
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
