@@ -1,7 +1,29 @@
 <?php
     include "mysql/db.php";
 
-    
+    if(isset($_POST["submit"])){
+        echo "data odeslány";
+        echo "<br>";
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        //vytažení informací z databíze
+        $dbusername = "SELECT username FROM users;";
+        $dbpassword = "SELECT password FROM users";
+
+        $result = mysqli_query($connection, $dbusername, $dbpassword);
+        
+
+        if($result($username == $dbusername && $password == $dbpassword)){
+        echo "Uspešně prihlášeni do databaze";
+        echo "<br>";
+        }else{
+        echo "Zadali jste spatnou hodnotu";
+        echo "<br>";
+        }
+        
+    }
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +37,7 @@
 <body>
     <div class="container">
         <h2>Přihlášení</h2>
-        <form action="proces.php" method="post">
+        <form action="index.php" method="post">
             <label for="username">Uživatelské jméno:</label>
             <input type="text" id="username" name="username" required><br><br>
 

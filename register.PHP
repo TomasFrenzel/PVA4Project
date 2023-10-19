@@ -12,10 +12,6 @@
         VALUES('$username','$email','$password')";
 
         $result = mysqli_query($connection, $query);
-
-        if(!$result){
-            die ("dotaz do databze selhal".mysqli_error());
-        }
     }
 
 ?>
@@ -31,7 +27,7 @@
 <body>
     <div class="container">
         <h2>Registrace</h2>
-        <form action="register.php" method="post">
+        <form action="post.php" method="post">
             <label for="username">Uživatelské jméno:</label>
             <input type="text" id="username" name="username" required><br><br>
 
