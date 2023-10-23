@@ -2,8 +2,21 @@
     include "mysql/db.php";
 
     if(isset($_POST["submit"])){
+<<<<<<< HEAD
         Registrace();
         echo "Ahoj";
+=======
+        echo "data odeslány";
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $email = $_POST["email"];
+
+        $query = "INSERT INTO users(username,email,password) 
+        VALUES('$username','$email','$password')";
+
+        $result = mysqli_query($connection, $query);
+>>>>>>> 67e7b4a1a26f5ce8f5e3308ae4746944c240ff91
     }
 ?>
 
@@ -18,7 +31,7 @@
 <body>
     <div class="container">
         <h2>Registrace</h2>
-        <form action="register.php" method="post">
+        <form action="post.php" method="post">
             <label for="username">Uživatelské jméno:</label>
             <input type="text" id="username" name="username" required><br><br>
 
