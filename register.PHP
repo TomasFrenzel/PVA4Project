@@ -2,22 +2,9 @@
     include "mysql/db.php";
 
     if(isset($_POST["submit"])){
-        echo "data odeslány";
-
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        $email = $_POST["email"];
-
-        $query = "INSERT INTO users(username,email,password) 
-        VALUES('$username','$email','$password')";
-
-        $result = mysqli_query($connection, $query);
-
-        if(!$result){
-            die ("dotaz do databze selhal".mysqli_error());
-        }
+        Registrace();
+        echo "Ahoj";
     }
-
 ?>
 
 <!DOCTYPE html>

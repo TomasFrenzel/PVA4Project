@@ -1,8 +1,8 @@
 <?php
     include "mysql/db.php";
-
-    
-
+    if(isset($_POST["submit"])){
+        login();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <h2>Přihlášení</h2>
-        <form action="proces.php" method="post">
+        <form action="index.php" method="post">
             <label for="username">Uživatelské jméno:</label>
             <input type="text" id="username" name="username" required><br><br>
 
