@@ -10,4 +10,6 @@
     } else{
         die("ou neco se pokazilo"); //zastaví zbytek procesu když se to pokazí
     }
+
+    
 ?>

@@ -5,10 +5,22 @@
         echo "data odeslány";
         echo "<br>";
 
-        $username = $_POST["username"];
-        $password = $_POST["password"];
+        $username_input = $_POST["username"];
+        $password_input = $_POST["password"];
+
+        $sql = "SELECT * FROM users WHERE username = '$username_input' and password = '$password_input' ";
+        
+        $result = mysqli_query($connection, $sql);
+        $row = mysqli_fetch_array($result);
+
+        if(mysqli_num_rows($result) === 1) {
+            echo 'user ' . $row['username'] . ' connected.';
+        }else {
+            echo 'no user found.';
+        }
 
         //vytažení informací z databíze
+        /*$sql = "SELECT  * FROM users"; // 
         $dbusername = "SELECT username FROM users;";
         $dbpassword = "SELECT password FROM users";
 
@@ -21,7 +33,8 @@
         }else{
         echo "Zadali jste spatnou hodnotu";
         echo "<br>";
-        }
+
+        }*/
         
     }
 
@@ -50,7 +63,9 @@
                 Nemáte ještě účet? <a href="register.php">Registrovat se</a>
             </div>
         </form>
+       <a href="kalkulacka.php"> <button>kalkulačka</button></a>
     </div>
 </body>
 </html>
+
 
