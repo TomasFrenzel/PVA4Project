@@ -11,9 +11,6 @@
         die("ou neco se pokazilo"); //zastaví zbytek procesu když se to pokazí
     }
 
-<<<<<<< HEAD
-    
-=======
     function Registrace(){
         global $connection;
         $username = $_POST["username"];
@@ -55,5 +52,4 @@
     
 
 
->>>>>>> d39dd8b56a398fc614573827a4aefb598ef90025
 ?>

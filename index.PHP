@@ -1,10 +1,9 @@
 <?php
     include "mysql/db.php";
-<<<<<<< HEAD
+
     if(isset($_POST["submit"])){
         login();
 }
-=======
 
     if(isset($_POST["submit"])){
         echo "data odeslány";
@@ -23,27 +22,8 @@
         }else {
             echo 'no user found.';
         }
-
-        //vytažení informací z databíze
-        /*$sql = "SELECT  * FROM users"; // 
-        $dbusername = "SELECT username FROM users;";
-        $dbpassword = "SELECT password FROM users";
-
-        $result = mysqli_query($connection, $dbusername, $dbpassword);
-        
-
-        if($result($username == $dbusername && $password == $dbpassword)){
-        echo "Uspešně prihlášeni do databaze";
-        echo "<br>";
-        }else{
-        echo "Zadali jste spatnou hodnotu";
-        echo "<br>";
-
-        }*/
-        
     }
 
->>>>>>> 67e7b4a1a26f5ce8f5e3308ae4746944c240ff91
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +31,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Bark</title>
 </head>
 <body>
     <div class="container">
