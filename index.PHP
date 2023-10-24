@@ -1,5 +1,10 @@
 <?php
     include "mysql/db.php";
+<<<<<<< HEAD
+    if(isset($_POST["submit"])){
+        login();
+}
+=======
 
     if(isset($_POST["submit"])){
         echo "data odeslány";
@@ -38,6 +43,7 @@
         
     }
 
+>>>>>>> 67e7b4a1a26f5ce8f5e3308ae4746944c240ff91
 ?>
 <!DOCTYPE html>
 <html lang="en">

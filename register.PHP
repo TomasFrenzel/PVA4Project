@@ -2,6 +2,10 @@
     include "mysql/db.php";
 
     if(isset($_POST["submit"])){
+<<<<<<< HEAD
+        Registrace();
+        echo "Ahoj";
+=======
         echo "data odeslány";
 
         $username = $_POST["username"];
@@ -12,8 +16,8 @@
         VALUES('$username','$email','$password')";
 
         $result = mysqli_query($connection, $query);
+>>>>>>> 67e7b4a1a26f5ce8f5e3308ae4746944c240ff91
     }
-
 ?>
 
 <!DOCTYPE html>
